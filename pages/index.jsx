@@ -1,4 +1,5 @@
 import Head from "next/head";
+import AppFooter from "../components/AppFooter";
 import AppHeader from "../components/AppHeader";
 import Navbar from "../components/Navbar";
 import Results from "../components/Results";
@@ -13,14 +14,18 @@ export default function Home({ results }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Header */}
-      <AppHeader />
+      <div className="bg-slate-700">
+        {/* Header */}
+        <AppHeader />
 
-      {/* Navbar */}
-      <Navbar />
+        {/* Navbar */}
+        <Navbar />
 
-      {/* Results: Movies */}
-      <Results results={results} />
+        {/* Results: Movies */}
+        <Results results={results} />
+
+        <AppFooter />
+      </div>
     </div>
   );
 }
